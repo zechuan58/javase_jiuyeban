@@ -1,3 +1,3 @@
-# javase_jiuyeban
+# 这是我的培训记录
 javaEE进阶练习
 武汉黑马程序员JavaEE152期学员练习代码
