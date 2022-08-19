@@ -5,7 +5,7 @@ import java.util.TreeSet;
 /**
  * TreeSet集合存储自定义Student类型
  */
-public class TreeSetCompareTo {
+public class MyTreeSet1 {
     public static void main(String[] args) {
         TreeSet<Student> ts=new TreeSet<>();
         Student s1=new Student("小明",21);

@@ -1,5 +1,7 @@
 package com.zechuan.treeset;
-
+/*
+实现接口Comparable,重写当中的compareTo方法
+ */
 public class Student implements Comparable<Student> {
     private String name;
     private int age;
