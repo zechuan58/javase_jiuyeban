@@ -30,13 +30,20 @@ public class Demo3 {
 
         //添加自定义元素
         System.out.println("--------------");
-        TreeSet<Student> set3 = new TreeSet<>(new Comparator<Student>() {
+        /*TreeSet<Student> set3 = new TreeSet<>(new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
                 int result = o1.getAge() - o2.getAge();
                 result = result == 0 ? o1.getName().compareTo(o2.getName()) : result;
                 return result;
             }
+        });*/
+
+        //改写为lambda表达式
+        TreeSet<Student> set3 = new TreeSet<>((o1, o2) -> {
+            int result = o1.getAge() - o2.getAge();
+            result = result == 0 ? o1.getName().compareTo(o2.getName()) : result;
+            return result;
         });
         set3.add(new Student("张三", 20));
         set3.add(new Student("小李四", 21));
