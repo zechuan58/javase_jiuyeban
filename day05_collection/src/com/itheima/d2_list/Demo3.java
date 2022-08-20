@@ -1,7 +1,5 @@
 package com.itheima.d2_list;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 
 /*
 LinkedList集合：底层数据结构是双向链表结构
