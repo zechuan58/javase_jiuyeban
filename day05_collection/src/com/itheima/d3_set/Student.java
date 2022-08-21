@@ -1,8 +1,9 @@
 package com.itheima.d3_set;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student /*implements Comparable<Student>*/ {
+public class Student implements Comparable<Student> {
     private String name;
     private int age;
 
@@ -27,24 +28,29 @@ public class Student /*implements Comparable<Student>*/ {
                 '}';
     }
 
-    /*@Override
-    public int compareTo(Student o) {
 
+    @Override
+    public int compareTo(Student o) {
         int result = this.age - o.age;
         result = result == 0 ? this.name.compareTo(o.name) : result;
         return result;
-    }*/
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Student student = (Student) o;
-        return age == student.age && Objects.equals(name, student.name);
+
+        if (age != student.age) return false;
+        return name != null ? name.equals(student.name) : student.name == null;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + age;
+        return result;
     }
 }

@@ -40,11 +40,12 @@ public class Demo3 {
         });*/
 
         //改写为lambda表达式
-        TreeSet<Student> set3 = new TreeSet<>((o1, o2) -> {
+        /*TreeSet<Student> set3 = new TreeSet<>((o1, o2) -> {
             int result = o1.getAge() - o2.getAge();
             result = result == 0 ? o1.getName().compareTo(o2.getName()) : result;
             return result;
-        });
+        });*/
+        TreeSet<Student> set3 = new TreeSet<>();
         set3.add(new Student("张三", 20));
         set3.add(new Student("小李四", 21));
         set3.add(new Student("小李四", 22));
