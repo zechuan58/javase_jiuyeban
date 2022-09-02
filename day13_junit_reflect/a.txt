@@ -1,0 +1,10 @@
+========Student========
+name=张三
+sex=男
+age=23
+className=Java152期
+hobby=唱跳 rap 篮球
+========Teacher========
+name=小李
+sex=男
+salary=20000.0
